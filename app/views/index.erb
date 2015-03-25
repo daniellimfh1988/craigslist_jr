@@ -1,0 +1,16 @@
+<div class="container">
+
+<h1>Craigslist</h1>
+
+<p><i>Welcome to Craigslist! We hope you find what you're looking for!</i></p>
+<br>
+<h2>PICK A CATEGORY TO START:</h2>
+
+<p><% Category.all.each do |x| %>
+  <ul><a href="/categories/<%= x.id %>/posts">
+    <li><%= x.category %></li>
+  </a></ul>
+  <%end%>
+</p>
+
+</div>

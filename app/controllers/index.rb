@@ -37,8 +37,8 @@ get '/posts/:id/edit' do
 end
 
 post '/posts/:id/edit' do
-  @post = Post.find(params[:id])
-  @post.update_attributes(params)
+  @post = Post.find(params[:id]
+  @post.update_attributes(params[:post])
   redirect to("/posts/#{@post.id}")
 end
 
